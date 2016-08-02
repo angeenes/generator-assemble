@@ -147,7 +147,7 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-      dist: {files: {'dist/assets/js/js.min.js': ['<%= config.src %>/assets/js/js.js'],}}
+      dist: {files: {'dist/assets/js/app.min.js': ['<%= config.src %>/assets/js/app.js'],}}
         },
 
     // Before generating any new files,
