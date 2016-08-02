@@ -40,6 +40,10 @@ _Do not initialize your project in a sub folder next to `.yo-rc.json` because yo
 * grunt-contrib-clean
 * grunt-contrib-connect
 * grunt-contrib-watch
+* grunt-contrib-stylus
+* grunt-contrib-uglify
+* grunt-contrib-imagemin
+* grunt-webfont
 * time-grunt
 
 
