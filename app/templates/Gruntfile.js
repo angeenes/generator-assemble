@@ -102,6 +102,53 @@ module.exports = function(grunt) {
         dest: '<%%= config.dist %>/assets/css/'
       }
     },
+    
+        stylus: {
+      compile: {
+        options: {
+          paths: ['<%= config.src %>/assets/'],
+          use: [
+            require('nib')
+          ]
+        },
+        files: {
+          '<%= config.dist %>/assets/css/style.css': '<%= config.src %>/assets/stylus/style.styl', // 1:1 compile
+        }
+      }
+    },
+
+    webfont: {
+      icons: {
+          src: 'src/assets/icons/*.svg',
+          dest: 'dist/assets/fonts',
+          options: {
+
+          }
+      }
+  },
+
+    imagemin: {                          // Task
+      static: {                          // Target
+        options: {                       // Target options
+          optimizationLevel: 3,
+        },
+        files: {                         // Dictionary of files
+          // '<%= config.dist %>/img/': '<%= config.src %>/assets/img/*'
+        }
+      },
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.src %>/assets/img/',
+          src: ['**/*.{png,jpg,gif,svg}'],
+          dest: '<%= config.dist %>/assets/img/'
+        }]
+      }
+    },
+
+    uglify: {
+      dist: {files: {'dist/assets/js/js.min.js': ['<%= config.src %>/assets/js/js.js'],}}
+        },
 
     // Before generating any new files,
     // remove any previously-created files.
