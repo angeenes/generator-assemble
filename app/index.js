@@ -169,6 +169,10 @@ var AssembleGenerator = yeoman.generators.Base.extend({
       this.mkdir('src/templates/assets');
       this.mkdir('src/templates/layouts');
       this.mkdir('src/templates/partials');
+      this.mkdir('src/assets/stylus');
+      this.mkdir('src/assets/js');
+      this.mkdir('src/assets/img');
+      this.mkdir('src/assets/icons');
       this.copy('site.yml', 'src/data/site.yml');
       this.copy('theme.css', 'src/assets/theme.css');
       this.copy('markdown.md', 'src/content/markdown.md');
