@@ -174,7 +174,7 @@ var AssembleGenerator = yeoman.generators.Base.extend({
       this.mkdir('src/assets/img');
       this.mkdir('src/assets/icons');
       this.copy('style.styl', 'src/assets/style.css');
-      this.copy('js.js', 'src/assets/js.js');
+      this.copy('app.js', 'src/assets/js.js');
       this.copy('theme.css', 'src/assets/theme.css');
       this.copy('markdown.md', 'src/content/markdown.md');
       this.copy('blog.hbs', 'src/templates/pages/blog.hbs');
