@@ -170,8 +170,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'clean',
-    'copy',
-    'assemble'
+    'assemble',
+    'stylus',
+    'uglify'
   ]);
 
   grunt.registerTask('default', [
